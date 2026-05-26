@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="A. J. Aragón">
+    <meta name="copyright" content="© 2026 A. J. Aragón">
+    <meta name="robots" content="index, follow">
+
+    <meta name="keywords"
+        content="desarrollador web, programador, .NET, Laravel, Angular, fullstack, portfolio, proyectos web, JavaScript, TypeScript, HTML, CSS, aplicaciones web">
+
+    <meta name="theme-color" content="#24e2cb">
+
+    <meta name="description"
+        content="Desarrollador de Aplicaciones Web especializado en .NET, Laravel y Angular. Estudiante de principios SOLID, patrones de diseño y buenas prácticas.">
+
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="AJ Aragón - Porfolio">
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!-- fonts -->
+    <!-- títulos: font-family: "Stack Sans Notch", sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Notch:wght@200..700&display=swap" rel="stylesheet">
+    <!-- cuerpo: font-family: "Stack Sans Text", sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Stack+Sans+Text:wght@200..700&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='50%25' stop-color='%23010a09'/%3E%3Cstop offset='50%25' stop-color='%2324e2cb'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='50' fill='url(%23g)'/%3E%3C/svg%3E">
+
+    <title>AJ Aragón - Porfolio</title>
+
+    <link rel="canonical" href="andresaragon.codecrew.info">
+
+    <style>
+        @view-transition {
+            navigation: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <section class="header-top">
+            <article class="article-title">
+                <h2 class="header-title" data-translate="header.title">A. J. Aragón</h2>
+            </article>
+            <article class="article-features">
+                <button class="button button-theme">
+                    <svg class="image-svg" width="28px" height="28px" viewBox="0 0 24 24" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M12 17.75C10.8628 17.75 9.75106 17.4128 8.80547 16.781C7.85989 16.1491 7.1229 15.2511 6.6877 14.2004C6.25249 13.1498 6.13862 11.9936 6.36049 10.8782C6.58235 9.76284 7.12999 8.73829 7.93414 7.93414C8.73829 7.12999 9.76284 6.58235 10.8782 6.36049C11.9936 6.13862 13.1498 6.25249 14.2004 6.6877C15.2511 7.1229 16.1491 7.85989 16.781 8.80547C17.4128 9.75106 17.75 10.8628 17.75 12C17.7474 13.5242 17.1407 14.9852 16.0629 16.0629C14.9852 17.1407 13.5242 17.7474 12 17.75ZM12 7.75C11.1594 7.75 10.3377 7.99926 9.63883 8.46626C8.93992 8.93325 8.39519 9.59701 8.07351 10.3736C7.75184 11.1502 7.66768 12.0047 7.83167 12.8291C7.99565 13.6536 8.40043 14.4108 8.9948 15.0052C9.58917 15.5996 10.3464 16.0044 11.1709 16.1683C11.9953 16.3323 12.8498 16.2482 13.6264 15.9265C14.403 15.6048 15.0668 15.0601 15.5337 14.3612C16.0007 13.6623 16.25 12.8406 16.25 12C16.2474 10.8736 15.7987 9.79417 15.0023 8.99772C14.2058 8.20126 13.1264 7.75264 12 7.75Z"
+                            fill="currentColor" />
+                        <path
+                            d="M12 5C11.8019 4.99741 11.6126 4.91756 11.4725 4.77747C11.3324 4.63737 11.2526 4.44811 11.25 4.25V2.75C11.25 2.55109 11.329 2.36032 11.4697 2.21967C11.6103 2.07902 11.8011 2 12 2C12.1989 2 12.3897 2.07902 12.5303 2.21967C12.671 2.36032 12.75 2.55109 12.75 2.75V4.25C12.7474 4.44811 12.6676 4.63737 12.5275 4.77747C12.3874 4.91756 12.1981 4.99741 12 5Z"
+                            fill="currentColor" />
+                        <path
+                            d="M12 22C11.8019 21.9974 11.6126 21.9176 11.4725 21.7775C11.3324 21.6374 11.2526 21.4481 11.25 21.25V19.75C11.25 19.5511 11.329 19.3603 11.4697 19.2197C11.6103 19.079 11.8011 19 12 19C12.1989 19 12.3897 19.079 12.5303 19.2197C12.671 19.3603 12.75 19.5511 12.75 19.75V21.25C12.7474 21.4481 12.6676 21.6374 12.5275 21.7775C12.3874 21.9176 12.1981 21.9974 12 22Z"
+                            fill="currentColor" />
+                        <path
+                            d="M21.25 12.75H19.75C19.5511 12.75 19.3603 12.671 19.2197 12.5303C19.079 12.3897 19 12.1989 19 12C19 11.8011 19.079 11.6103 19.2197 11.4697C19.3603 11.329 19.5511 11.25 19.75 11.25H21.25C21.4489 11.25 21.6397 11.329 21.7803 11.4697C21.921 11.6103 22 11.8011 22 12C22 12.1989 21.921 12.3897 21.7803 12.5303C21.6397 12.671 21.4489 12.75 21.25 12.75Z"
+                            fill="currentColor" />
+                        <path
+                            d="M4.25 12.75H2.75C2.55109 12.75 2.36032 12.671 2.21967 12.5303C2.07902 12.3897 2 12.1989 2 12C2 11.8011 2.07902 11.6103 2.21967 11.4697C2.36032 11.329 2.55109 11.25 2.75 11.25H4.25C4.44891 11.25 4.63968 11.329 4.78033 11.4697C4.92098 11.6103 5 11.8011 5 12C5 12.1989 4.92098 12.3897 4.78033 12.5303C4.63968 12.671 4.44891 12.75 4.25 12.75Z"
+                            fill="currentColor" />
+                        <path
+                            d="M6.50001 7.24995C6.30707 7.2352 6.12758 7.14545 6.00001 6.99995L4.91001 5.99995C4.83844 5.92838 4.78167 5.84341 4.74293 5.7499C4.7042 5.65639 4.68427 5.55617 4.68427 5.45495C4.68427 5.35373 4.7042 5.25351 4.74293 5.16C4.78167 5.06649 4.83844 4.98152 4.91001 4.90995C4.98158 4.83838 5.06655 4.78161 5.16006 4.74287C5.25357 4.70414 5.3538 4.6842 5.45501 4.6842C5.55623 4.6842 5.65645 4.70414 5.74996 4.74287C5.84347 4.78161 5.92844 4.83838 6.00001 4.90995L7.00001 5.99995C7.123 6.13746 7.19099 6.31547 7.19099 6.49995C7.19099 6.68443 7.123 6.86244 7.00001 6.99995C6.87244 7.14545 6.69295 7.2352 6.50001 7.24995Z"
+                            fill="currentColor" />
+                        <path
+                            d="M18.56 19.31C18.4615 19.3104 18.3638 19.2912 18.2728 19.2534C18.1818 19.2157 18.0993 19.1601 18.03 19.09L17 18C16.9332 17.86 16.9114 17.7028 16.9376 17.5499C16.9638 17.3971 17.0368 17.2561 17.1465 17.1464C17.2561 17.0368 17.3971 16.9638 17.55 16.9376C17.7028 16.9113 17.8601 16.9331 18 17L19.09 18C19.2305 18.1406 19.3094 18.3312 19.3094 18.53C19.3094 18.7287 19.2305 18.9194 19.09 19.06C19.0233 19.1355 18.9419 19.1967 18.8508 19.2397C18.7597 19.2827 18.6607 19.3066 18.56 19.31Z"
+                            fill="currentColor" />
+                        <path
+                            d="M17.5 7.24995C17.3071 7.2352 17.1276 7.14545 17 6.99995C16.877 6.86244 16.809 6.68443 16.809 6.49995C16.809 6.31547 16.877 6.13746 17 5.99995L18 4.90995C18.1445 4.76541 18.3406 4.6842 18.545 4.6842C18.7494 4.6842 18.9455 4.76541 19.09 4.90995C19.2345 5.05449 19.3158 5.25054 19.3158 5.45495C19.3158 5.65936 19.2345 5.85541 19.09 5.99995L18 6.99995C17.8724 7.14545 17.6929 7.2352 17.5 7.24995Z"
+                            fill="currentColor" />
+                        <path
+                            d="M5.44001 19.31C5.34147 19.3104 5.24383 19.2912 5.15282 19.2534C5.06181 19.2157 4.97926 19.1601 4.91001 19.09C4.76956 18.9494 4.69067 18.7587 4.69067 18.56C4.69067 18.3612 4.76956 18.1706 4.91001 18.03L6.00001 17C6.13997 16.9331 6.2972 16.9113 6.45006 16.9376C6.60293 16.9638 6.7439 17.0368 6.85357 17.1464C6.96324 17.2561 7.03621 17.3971 7.06244 17.5499C7.08866 17.7028 7.06685 17.86 7.00001 18L6.00001 19.09C5.92728 19.1638 5.83985 19.2216 5.74338 19.2595C5.64691 19.2974 5.54356 19.3146 5.44001 19.31Z"
+                            fill="currentColor" />
+                    </svg>
+                </button>
+                <div class="container-language">
+                    <h2 class="language" data-translate="language_selector.current">ES</h2>
+                    <ul class="list-languages">
+                        <li class="item-languages">
+                            <button class="button-language" id="language-en"
+                                data-translate="language_selector.en">Inglés</button>
+                        </li>
+                        <li class="item-languages">
+                            <button class="button-language" id="language-es"
+                                data-translate="language_selector.es">Español</button>
+                        </li>
+                        <li class="item-languages">
+                            <button class="button-language" id="language-fr"
+                                data-translate="language_selector.fr">Francés</button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="container-menu">
+                    <img class="author-image" loading="lazy" fetchpriority="low" decoding="async"
+                        src="assets/profile.jpg" alt="author">
+                    <button class="button button-menu">
+                        <svg class="image-svg" width="28px" height="28px" viewBox="0 0 24 24" fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M13.93 11H3.92999C3.73108 11 3.54031 10.921 3.39966 10.7803C3.25901 10.6397 3.17999 10.4489 3.17999 10.25C3.17999 10.0511 3.25901 9.86032 3.39966 9.71967C3.54031 9.57902 3.73108 9.5 3.92999 9.5H13.93C14.1289 9.5 14.3197 9.57902 14.4603 9.71967C14.601 9.86032 14.68 10.0511 14.68 10.25C14.68 10.4489 14.601 10.6397 14.4603 10.7803C14.3197 10.921 14.1289 11 13.93 11Z"
+                                fill="currentColor" />
+                            <path
+                                d="M20.07 7H4.07001C3.8711 7 3.68033 6.92098 3.53968 6.78033C3.39903 6.63968 3.32001 6.44891 3.32001 6.25C3.32001 6.05109 3.39903 5.86032 3.53968 5.71967C3.68033 5.57902 3.8711 5.5 4.07001 5.5H20.07C20.2689 5.5 20.4597 5.57902 20.6003 5.71967C20.741 5.86032 20.82 6.05109 20.82 6.25C20.82 6.44891 20.741 6.63968 20.6003 6.78033C20.4597 6.92098 20.2689 7 20.07 7Z"
+                                fill="currentColor" />
+                            <path
+                                d="M20.07 15H4.07001C3.8711 15 3.68033 14.921 3.53968 14.7803C3.39903 14.6397 3.32001 14.4489 3.32001 14.25C3.32001 14.0511 3.39903 13.8603 3.53968 13.7197C3.68033 13.579 3.8711 13.5 4.07001 13.5H20.07C20.2689 13.5 20.4597 13.579 20.6003 13.7197C20.741 13.8603 20.82 14.0511 20.82 14.25C20.82 14.4489 20.741 14.6397 20.6003 14.7803C20.4597 14.921 20.2689 15 20.07 15Z"
+                                fill="currentColor" />
+                            <path
+                                d="M13.93 19H3.92999C3.73108 19 3.54031 18.921 3.39966 18.7803C3.25901 18.6397 3.17999 18.4489 3.17999 18.25C3.17999 18.0511 3.25901 17.8603 3.39966 17.7197C3.54031 17.579 3.73108 17.5 3.92999 17.5H13.93C14.1289 17.5 14.3197 17.579 14.4603 17.7197C14.601 17.8603 14.68 18.0511 14.68 18.25C14.68 18.4489 14.601 18.6397 14.4603 18.7803C14.3197 18.921 14.1289 19 13.93 19Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+            </article>
+        </section>
+        <section class="header-bottom">
+            <nav class="navbar header-navbar" aria-label="header-navbar">
+                <ul class="list-navbar-links">
+                    <li class="item-navbar-links">
+                        <a class="link navbar-link" href="/index.html" data-translate="navigation.home">Home</a>
+                    </li>
+                    <li class="item-navbar-links">
+                        <a class="link navbar-link" href="#welcome" data-translate="navigation.welcome">Bienvenida</a>
+                    </li>
+                    <li class="item-navbar-links">
+                        <a class="link navbar-link" href="#technologies"
+                            data-translate="navigation.technologies">Tecnologías</a>
+                    </li>
+                    <li class="item-navbar-links">
+                        <a class="link navbar-link" href="#projects" data-translate="navigation.projects">
+                            Proyectos
+                            <ul class="list-projects">
+                                <li class="item-projects">
+                                    <a class="link project-link" href="#elSolitario">El Solitario</a>
+                                </li>
+                                <li class="item-projects">
+                                    <a class="link project-link" href="#libreriaPiramide">Librería Pirámide</a>
+                                </li>
+                                <li class="item-projects">
+                                    <a class="link project-link" href="#zoo">Zoo</a>
+                                </li>
+                                <li class="item-projects">
+                                    <a class="link project-link" href="#analizadorMinerales">Analizador
+                                        minerales</a>
+                                </li>
+                            </ul>
+                        </a>
+                    </li>
+                    <li class="item-navbar-links">
+                        <a class="link navbar-link" href="#idiomas" data-translate="navigation.languages">Idiomas</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <div class="header-sentinel"></div>
+    <main class="main" id="main">
+        <section class="side-menu">
+            <img class="side-menu-author-image" loading="lazy" fetchpriority="low" decoding="async"
+                src="assets/profile.jpg" alt="author">
+            <article class="article-side-menu-info">
+                <h1 class="side-menu-author-name" data-translate="sidebar.title">A. J. Aragón</h1>
+                <h3 class="side-menu-author-role" data-translate="sidebar.role">Desarrollador Fullstack</h3>
+                <p class="side-menu-author-description" data-translate="sidebar.description_1">
+                    Desarrollador de Aplicaciones Web especializado en .NET, Laravel y Angular.
+                </p>
+                <p class="side-menu-author-description" data-translate="sidebar.description_2">
+                    Estudiante de principios SOLID, patrones de diseño y buenas prácticas.
+                </p>
+            </article>
+            <article class="article-side-menu-social">
+                <!-- linkedIn -->
+                <a class="link side-menu-link" href="https://www.linkedin.com/in/ajaragon/">
+                    <svg class="image-svg" height="25px" width="25px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 382 382" xml:space="preserve"
+                        fill="currentColor">
+                        <path d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+                        C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+                        H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+                        c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+                        s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+                        c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+                        c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+                        c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+                        L341.91,330.654L341.91,330.654z" />
+                    </svg>
+                    <span>www.linkedin.com/in/ajaragon</span>
+                </a>
+                <!-- github -->
+                <a class="link side-menu-link" href="https://github.com/andresaragonguerrero">
+                    <svg fill="currentColor" width="25px" height="25px" viewBox="0 -0.5 25 25"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m12.301 0h.093c2.242 0 4.34.613 6.137 1.68l-.055-.031c1.871 1.094 3.386 2.609 4.449 4.422l.031.058c1.04 1.769 1.654 3.896 1.654 6.166 0 5.406-3.483 10-8.327 11.658l-.087.026c-.063.02-.135.031-.209.031-.162 0-.312-.054-.433-.144l.002.001c-.128-.115-.208-.281-.208-.466 0-.005 0-.01 0-.014v.001q0-.048.008-1.226t.008-2.154c.007-.075.011-.161.011-.249 0-.792-.323-1.508-.844-2.025.618-.061 1.176-.163 1.718-.305l-.076.017c.573-.16 1.073-.373 1.537-.642l-.031.017c.508-.28.938-.636 1.292-1.058l.006-.007c.372-.476.663-1.036.84-1.645l.009-.035c.209-.683.329-1.468.329-2.281 0-.045 0-.091-.001-.136v.007c0-.022.001-.047.001-.072 0-1.248-.482-2.383-1.269-3.23l.003.003c.168-.44.265-.948.265-1.479 0-.649-.145-1.263-.404-1.814l.011.026c-.115-.022-.246-.035-.381-.035-.334 0-.649.078-.929.216l.012-.005c-.568.21-1.054.448-1.512.726l.038-.022-.609.384c-.922-.264-1.981-.416-3.075-.416s-2.153.152-3.157.436l.081-.02q-.256-.176-.681-.433c-.373-.214-.814-.421-1.272-.595l-.066-.022c-.293-.154-.64-.244-1.009-.244-.124 0-.246.01-.364.03l.013-.002c-.248.524-.393 1.139-.393 1.788 0 .531.097 1.04.275 1.509l-.01-.029c-.785.844-1.266 1.979-1.266 3.227 0 .025 0 .051.001.076v-.004c-.001.039-.001.084-.001.13 0 .809.12 1.591.344 2.327l-.015-.057c.189.643.476 1.202.85 1.693l-.009-.013c.354.435.782.793 1.267 1.062l.022.011c.432.252.933.465 1.46.614l.046.011c.466.125 1.024.227 1.595.284l.046.004c-.431.428-.718 1-.784 1.638l-.001.012c-.207.101-.448.183-.699.236l-.021.004c-.256.051-.549.08-.85.08-.022 0-.044 0-.066 0h.003c-.394-.008-.756-.136-1.055-.348l.006.004c-.371-.259-.671-.595-.881-.986l-.007-.015c-.198-.336-.459-.614-.768-.827l-.009-.006c-.225-.169-.49-.301-.776-.38l-.016-.004-.32-.048c-.023-.002-.05-.003-.077-.003-.14 0-.273.028-.394.077l.007-.003q-.128.072-.08.184c.039.086.087.16.145.225l-.001-.001c.061.072.13.135.205.19l.003.002.112.08c.283.148.516.354.693.603l.004.006c.191.237.359.505.494.792l.01.024.16.368c.135.402.38.738.7.981l.005.004c.3.234.662.402 1.057.478l.016.002c.33.064.714.104 1.106.112h.007c.045.002.097.002.15.002.261 0 .517-.021.767-.062l-.027.004.368-.064q0 .609.008 1.418t.008.873v.014c0 .185-.08.351-.208.466h-.001c-.119.089-.268.143-.431.143-.075 0-.147-.011-.214-.032l.005.001c-4.929-1.689-8.409-6.283-8.409-11.69 0-2.268.612-4.393 1.681-6.219l-.032.058c1.094-1.871 2.609-3.386 4.422-4.449l.058-.031c1.739-1.034 3.835-1.645 6.073-1.645h.098-.005zm-7.64 17.666q.048-.112-.112-.192-.16-.048-.208.032-.048.112.112.192.144.096.208-.032zm.497.545q.112-.08-.032-.256-.16-.144-.256-.048-.112.08.032.256.159.157.256.047zm.48.72q.144-.112 0-.304-.128-.208-.272-.096-.144.08 0 .288t.272.112zm.672.673q.128-.128-.064-.304-.192-.192-.32-.048-.144.128.064.304.192.192.32.044zm.913.4q.048-.176-.208-.256-.24-.064-.304.112t.208.24q.24.097.304-.096zm1.009.08q0-.208-.272-.176-.256 0-.256.176 0 .208.272.176.256.001.256-.175zm.929-.16q-.032-.176-.288-.144-.256.048-.224.24t.288.128.225-.224z" />
+                    </svg>
+                    <span>github.com/andresaragonguerrero</span>
+                </a>
+            </article>
+        </section>
+        <section class="main-content">
+            <article class="article article-welcome" id="welcome">
+                <h2 class="title-article" data-translate="main.welcome.title">Hola, soy Andrés Aragón:</h2>
+                <p class="article-paragraph" data-translate="main.welcome.text">
+                    Un desarrollador de aplicaciones web apasionado por crear soluciones innovadoras y eficientes.
+                    Me considero una persona tranquila, sensata y muy dedicada a lo que hace.
+                    Me implico de verdad en aprender, mejorar y hacer las cosas bien.
+                    Mi forma de trabajar es cuidadosa y paciente: analizo, pregunto cuando hace falta
+                    y busco soluciones sólidas antes que rápidas.
+                    Me gusta rodearme de equipos donde haya respeto, aprendizaje y ganas de construir cosas de
+                    calidad.
+                </p>
+            </article>
+            <article class="article article-technologies" id="technologies">
+                <h2 class="title-article" data-translate="main.technologies.title">Tecnologías</h2>
+                <ul class="list-technologies" data-translate-list="technologies_list">
+                    <li class="item-technology">.NET</li>
+                    <li class="item-technology">Laravel</li>
+                    <li class="item-technology">Angular</li>
+                    <li class="item-technology">React</li>
+                    <li class="item-technology">VueJS</li>
+                    <li class="item-technology">C#</li>
+                    <li class="item-technology">Java</li>
+                    <li class="item-technology">PHP</li>
+                    <li class="item-technology">JavaScript</li>
+                    <li class="item-technology">TypeScript</li>
+                    <li class="item-technology">HTML5</li>
+                    <li class="item-technology">TailwindCSS</li>
+                    <li class="item-technology">CSS3</li>
+                    <li class="item-technology">SCSS</li>
+                    <li class="item-technology">SQL</li>
+                    <li class="item-technology">Git</li>
+                    <li class="item-technology">Adobe Photoshop</li>
+                </ul>
+            </article>
+            <article class="article article-projects" id="projects">
+                <h2 class="title-article" data-translate="main.projects.title">Proyectos</h2>
+                <p class="article-paragraph" data-translate="main.projects.intro">
+                    En esta sección podrás encontrar una breve descripción de los proyectos que he realizado:
+                </p>
+                <ul class="list-projects">
+
+                    <!-- zoo -->
+                    <li class="item-project" id="zoo">
+                        <div class="title-project-wrapper">
+                            <h3 class="title-project" data-translate="main.projects.zoo.title">Senda Animal</h3>
+                            <div class="link-project-wrapper">
+                                <a class="link link-project" href="https://senda-animal.vercel.app/home">
+                                    <span data-translate="buttons.view_project">Ver proyecto</span>
+                                </a>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="image-svg" height="20px" width="20px"
+                                    viewBox="0 0 640 640" fill="currentColor">
+                                    <path
+                                        d="M451.5 160C434.9 160 418.8 164.5 404.7 172.7C388.9 156.7 370.5 143.3 350.2 133.2C378.4 109.2 414.3 96 451.5 96C537.9 96 608 166 608 252.5C608 294 591.5 333.8 562.2 363.1L491.1 434.2C461.8 463.5 422 480 380.5 480C294.1 480 224 410 224 323.5C224 322 224 320.5 224.1 319C224.6 301.3 239.3 287.4 257 287.9C274.7 288.4 288.6 303.1 288.1 320.8C288.1 321.7 288.1 322.6 288.1 323.4C288.1 374.5 329.5 415.9 380.6 415.9C405.1 415.9 428.6 406.2 446 388.8L517.1 317.7C534.4 300.4 544.2 276.8 544.2 252.3C544.2 201.2 502.8 159.8 451.7 159.8zM307.2 237.3C305.3 236.5 303.4 235.4 301.7 234.2C289.1 227.7 274.7 224 259.6 224C235.1 224 211.6 233.7 194.2 251.1L123.1 322.2C105.8 339.5 96 363.1 96 387.6C96 438.7 137.4 480.1 188.5 480.1C205 480.1 221.1 475.7 235.2 467.5C251 483.5 269.4 496.9 289.8 507C261.6 530.9 225.8 544.2 188.5 544.2C102.1 544.2 32 474.2 32 387.7C32 346.2 48.5 306.4 77.8 277.1L148.9 206C178.2 176.7 218 160.2 259.5 160.2C346.1 160.2 416 230.8 416 317.1C416 318.4 416 319.7 416 321C415.6 338.7 400.9 352.6 383.2 352.2C365.5 351.8 351.6 337.1 352 319.4C352 318.6 352 317.9 352 317.1C352 283.4 334 253.8 307.2 237.5z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="description-project" data-translate="main.projects.zoo.description">
+                            Sitio web informativo sobre un zoológico ficticio,
+                            desarrollado con Angular, SCSS.
+                        </p>
+
+                        <!-- acordeón -->
+                        <div class="details-container">
+                            <em class="explanation-project" data-translate="main.projects.zoo.details">
+                                Este proyecto se encuentra en desarrollo. Me estoy centrando en aprender a estructurar
+                                una aplicación Angular
+                                utilizando componentes y servicios. Pretendo aplicar buenas prácticas de desarrollo
+                                y emplear patrones de diseño.
+                            </em>
+                        </div>
+
+                        <button class="toggle-details-btn" type="button" data-translate="buttons.view_details"
+                            data-translate-alt="buttons.view_less">
+                            Ver más detalles
+                        </button>
+
+                        <ul class="list-technologies">
+                            <li class="item-technology">Angular</li>
+                            <li class="item-technology">SCSS</li>
+                            <li class="item-technology">TypeScript</li>
+                        </ul>
+                    </li>
+
+                    <li class="item-project" id="angularShop">
+                        <div class="title-project-wrapper">
+                            <h3 class="title-project" data-translate="main.projects.angular_shop.title">
+                                Bestashop
+                            </h3>
+
+                            <div class="link-project-wrapper">
+                                <a class="link link-project" href="https://bestashop.vercel.app/">
+                                    <span data-translate="buttons.view_project">Ver proyecto</span>
+                                </a>
+
+                                <svg xmlns="http://www.w3.org/2000/svg" class="image-svg" height="20px" width="20px"
+                                    viewBox="0 0 640 640" fill="currentColor">
+                                    <path
+                                        d="M451.5 160C434.9 160 418.8 164.5 404.7 172.7C388.9 156.7 370.5 143.3 350.2 133.2C378.4 109.2 414.3 96 451.5 96C537.9 96 608 166 608 252.5C608 294 591.5 333.8 562.2 363.1L491.1 434.2C461.8 463.5 422 480 380.5 480C294.1 480 224 410 224 323.5C224 322 224 320.5 224.1 319C224.6 301.3 239.3 287.4 257 287.9C274.7 288.4 288.6 303.1 288.1 320.8C288.1 321.7 288.1 322.6 288.1 323.4C288.1 374.5 329.5 415.9 380.6 415.9C405.1 415.9 428.6 406.2 446 388.8L517.1 317.7C534.4 300.4 544.2 276.8 544.2 252.3C544.2 201.2 502.8 159.8 451.7 159.8zM307.2 237.3C305.3 236.5 303.4 235.4 301.7 234.2C289.1 227.7 274.7 224 259.6 224C235.1 224 211.6 233.7 194.2 251.1L123.1 322.2C105.8 339.5 96 363.1 96 387.6C96 438.7 137.4 480.1 188.5 480.1C205 480.1 221.1 475.7 235.2 467.5C251 483.5 269.4 496.9 289.8 507C261.6 530.9 225.8 544.2 188.5 544.2C102.1 544.2 32 474.2 32 387.7C32 346.2 48.5 306.4 77.8 277.1L148.9 206C178.2 176.7 218 160.2 259.5 160.2C346.1 160.2 416 230.8 416 317.1C416 318.4 416 319.7 416 321C415.6 338.7 400.9 352.6 383.2 352.2C365.5 351.8 351.6 337.1 352 319.4C352 318.6 352 317.9 352 317.1C352 283.4 334 253.8 307.2 237.5z" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <p class="description-project" data-translate="main.projects.angular_shop.description">
+                            Aplicación web de demostración de una tienda online desarrollada con Angular.
+                            Incluye catálogo de productos, filtros, carrito de compra y gestión de sesión de usuario.
+                        </p>
+
+                        <!-- acordeón -->
+                        <div class="details-container">
+
+                            <em class="explanation-project" data-translate="main.projects.angular_shop.details_1">
+                                El objetivo de este proyecto fue practicar la arquitectura de una aplicación frontend
+                                basada en componentes.
+                                Implementé un catálogo de productos con búsqueda, filtros y ordenación,
+                                así como un carrito de compra persistente utilizando LocalStorage.
+                            </em>
+
+                            <em class="explanation-project" data-translate="main.projects.angular_shop.details_2">
+                                Durante el desarrollo trabajé con Angular y RxJS para gestionar el flujo de datos
+                                mediante
+                                Observables y servicios compartidos.
+                                También implementé la comunicación entre componentes mediante inputs, outputs y
+                                servicios
+                                para mantener un estado consistente en la aplicación.
+                            </em>
+
+                            <em class="explanation-project" data-translate="main.projects.angular_shop.details_3">
+                                El proyecto se desarrolló siguiendo una dinámica de trabajo basada en SCRUM junto con
+                                otros
+                                compañeros,
+                                dividiendo las funcionalidades en tareas pequeñas e iterativas.
+                                Esta experiencia me permitió practicar la organización del trabajo en equipo y la
+                                planificación incremental de funcionalidades.
+                            </em>
+
+                        </div>
+
+                        <button class="toggle-details-btn" type="button" data-translate="buttons.view_details"
+                            data-translate-alt="buttons.view_less">
+                            Ver más detalles
+                        </button>
+
+                        <ul class="list-technologies">
+                            <li class="item-technology">Angular</li>
+                            <li class="item-technology">TypeScript</li>
+                        </ul>
+                    </li>
+
+                    <!-- módulo lunar: analizador de minerales -->
+                    <li class="item-project" id="analizadorMinerales">
+                        <div class="title-project-wrapper">
+                            <h3 class="title-project" data-translate="main.projects.minerals.title">Analizador de
+                                minerales
+                            </h3>
+                            <div class="link-project-wrapper">
+                                <a class="link link-project"
+                                    href="https://andresaragonguerrero.github.io/analizadorMinerales/">
+                                    <span data-translate="buttons.view_project">Ver proyecto</span>
+                                </a>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="image-svg" height="20px" width="20px"
+                                    viewBox="0 0 640 640" fill="currentColor">
+                                    <path
+                                        d="M451.5 160C434.9 160 418.8 164.5 404.7 172.7C388.9 156.7 370.5 143.3 350.2 133.2C378.4 109.2 414.3 96 451.5 96C537.9 96 608 166 608 252.5C608 294 591.5 333.8 562.2 363.1L491.1 434.2C461.8 463.5 422 480 380.5 480C294.1 480 224 410 224 323.5C224 322 224 320.5 224.1 319C224.6 301.3 239.3 287.4 257 287.9C274.7 288.4 288.6 303.1 288.1 320.8C288.1 321.7 288.1 322.6 288.1 323.4C288.1 374.5 329.5 415.9 380.6 415.9C405.1 415.9 428.6 406.2 446 388.8L517.1 317.7C534.4 300.4 544.2 276.8 544.2 252.3C544.2 201.2 502.8 159.8 451.7 159.8zM307.2 237.3C305.3 236.5 303.4 235.4 301.7 234.2C289.1 227.7 274.7 224 259.6 224C235.1 224 211.6 233.7 194.2 251.1L123.1 322.2C105.8 339.5 96 363.1 96 387.6C96 438.7 137.4 480.1 188.5 480.1C205 480.1 221.1 475.7 235.2 467.5C251 483.5 269.4 496.9 289.8 507C261.6 530.9 225.8 544.2 188.5 544.2C102.1 544.2 32 474.2 32 387.7C32 346.2 48.5 306.4 77.8 277.1L148.9 206C178.2 176.7 218 160.2 259.5 160.2C346.1 160.2 416 230.8 416 317.1C416 318.4 416 319.7 416 321C415.6 338.7 400.9 352.6 383.2 352.2C365.5 351.8 351.6 337.1 352 319.4C352 318.6 352 317.9 352 317.1C352 283.4 334 253.8 307.2 237.5z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="description-project" data-translate="main.projects.minerals.description">
+                            Una aplicación en Angular para practicar y demostrar arquitectura y buenas prácticas de
+                            código.
+                        </p>
+
+                        <!-- acordeón -->
+                        <div class="details-container">
+                            <em class="explanation-project" data-translate="main.projects.minerals.details_1">
+                                Este proyecto nació como un ejercicio en un curso. Su objetivo principal era servir
+                                como
+                                un campo de pruebas para aplicar de forma
+                                concreta principios de diseño de software y arquitectura limpia empleando Angular.
+                            </em>
+                            <em class="explanation-project" data-translate="main.projects.minerals.details_2">
+                                Desarrollé la aplicación enfocándome en cómo organizar el código de manera
+                                mantenible. Intenté aplicar patrones de diseño específicos (como Inyección de
+                                Dependencias, Servicios o Repository) y los principios SOLID para separar claramente
+                                las
+                                responsabilidades. Por ejemplo, creé servicios independientes para manejar la lógica
+                                de
+                                negocio y componentes dedicados solo a mostrar la información. También experimenté
+                                con
+                                el diseño de la interfaz para hacerla funcional.
+                            </em>
+                            <em class="explanation-project" data-translate="main.projects.minerals.details_3">
+                                Este ejercicio me hizo ver la diferencia entre "que funcione" y "que esté bien
+                                construido". Aprendí en la práctica por qué es útil separar la lógica en partes
+                                pequeñas
+                                e independientes: para poder cambiar una parte sin romper todo lo demás.
+                            </em>
+                        </div>
+
+                        <button class="toggle-details-btn" type="button" data-translate="buttons.view_details"
+                            data-translate-alt="buttons.view_less">
+                            Ver más detalles
+                        </button>
+
+                        <ul class="list-technologies">
+                            <li class="item-technology">Angular</li>
+                            <li class="item-technology">TypeScript</li>
+                        </ul>
+                    </li>
+
+                    <!-- Hotel Argyros -->
+                    <li class="item-project" id="hotelargyros">
+                        <div class="title-project-wrapper">
+                            <h3 class="title-project" data-translate="main.projects.hotel.title">
+                                Hotel Argyros
+                            </h3>
+                            <div class="link-project-wrapper">
+                                <a class="link link-project"
+                                    href="https://argyroshotel.netlify.app/">
+                                    <span data-translate="buttons.view_project">Ver proyecto</span>
+                                </a>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="image-svg" height="20px" width="20px"
+                                    viewBox="0 0 640 640" fill="currentColor">
+                                    <path
+                                        d="M451.5 160C434.9 160 418.8 164.5 404.7 172.7C388.9 156.7 370.5 143.3 350.2 133.2C378.4 109.2 414.3 96 451.5 96C537.9 96 608 166 608 252.5C608 294 591.5 333.8 562.2 363.1L491.1 434.2C461.8 463.5 422 480 380.5 480C294.1 480 224 410 224 323.5C224 322 224 320.5 224.1 319C224.6 301.3 239.3 287.4 257 287.9C274.7 288.4 288.6 303.1 288.1 320.8C288.1 321.7 288.1 322.6 288.1 323.4C288.1 374.5 329.5 415.9 380.6 415.9C405.1 415.9 428.6 406.2 446 388.8L517.1 317.7C534.4 300.4 544.2 276.8 544.2 252.3C544.2 201.2 502.8 159.8 451.7 159.8zM307.2 237.3C305.3 236.5 303.4 235.4 301.7 234.2C289.1 227.7 274.7 224 259.6 224C235.1 224 211.6 233.7 194.2 251.1L123.1 322.2C105.8 339.5 96 363.1 96 387.6C96 438.7 137.4 480.1 188.5 480.1C205 480.1 221.1 475.7 235.2 467.5C251 483.5 269.4 496.9 289.8 507C261.6 530.9 225.8 544.2 188.5 544.2C102.1 544.2 32 474.2 32 387.7C32 346.2 48.5 306.4 77.8 277.1L148.9 206C178.2 176.7 218 160.2 259.5 160.2C346.1 160.2 416 230.8 416 317.1C416 318.4 416 319.7 416 321C415.6 338.7 400.9 352.6 383.2 352.2C365.5 351.8 351.6 337.1 352 319.4C352 318.6 352 317.9 352 317.1C352 283.4 334 253.8 307.2 237.5z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="description-project" data-translate="main.projects.hotel.description">
+                            Una aplicación en Angular y .NET para practicar y demostrar arquitectura y buenas prácticas de
+                            código.
+                        </p>
+
+                        <!-- acordeón -->
+                        <div class="details-container">
+                            <em class="explanation-project" data-translate="main.projects.hotel.details_1">
+                                Este proyecto se encuentra actualmente en desarrollo. 
+                                Pretendo demostrar mis conocimientos tanto en todo lo relacionado con las bases de datos, como el backend y el frontend.
+                            </em>
+                        </div>
+
+                        <button class="toggle-details-btn" type="button" data-translate="buttons.view_details"
+                            data-translate-alt="buttons.view_less">
+                            Ver más detalles
+                        </button>
+
+                        <ul class="list-technologies">
+                            <li class="item-technology">Angular</li>
+                            <li class="item-technology">TypeScript</li>
+                            <li class="item-technology"> .NET </li>
+                            <li class="item-technology">C#</li>
+                        </ul>
+                    </li>
+
+                    <!-- el solitario -->
+                    <li class="item-project" id="elSolitario">
+                        <div class="title-project-wrapper">
+                            <h3 class="title-project" data-translate="main.projects.solitaire.title">Juego El
+                                Solitario
+                            </h3>
+                            <div class="link-project-wrapper">
+                                <a class="link link-project" href="https://aragonaj.github.io/Solitario/">
+                                    <span data-translate="buttons.view_project">Ver proyecto</span>
+                                </a>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="image-svg" height="20px" width="20px"
+                                    viewBox="0 0 640 640" fill="currentColor">
+                                    <path
+                                        d="M451.5 160C434.9 160 418.8 164.5 404.7 172.7C388.9 156.7 370.5 143.3 350.2 133.2C378.4 109.2 414.3 96 451.5 96C537.9 96 608 166 608 252.5C608 294 591.5 333.8 562.2 363.1L491.1 434.2C461.8 463.5 422 480 380.5 480C294.1 480 224 410 224 323.5C224 322 224 320.5 224.1 319C224.6 301.3 239.3 287.4 257 287.9C274.7 288.4 288.6 303.1 288.1 320.8C288.1 321.7 288.1 322.6 288.1 323.4C288.1 374.5 329.5 415.9 380.6 415.9C405.1 415.9 428.6 406.2 446 388.8L517.1 317.7C534.4 300.4 544.2 276.8 544.2 252.3C544.2 201.2 502.8 159.8 451.7 159.8zM307.2 237.3C305.3 236.5 303.4 235.4 301.7 234.2C289.1 227.7 274.7 224 259.6 224C235.1 224 211.6 233.7 194.2 251.1L123.1 322.2C105.8 339.5 96 363.1 96 387.6C96 438.7 137.4 480.1 188.5 480.1C205 480.1 221.1 475.7 235.2 467.5C251 483.5 269.4 496.9 289.8 507C261.6 530.9 225.8 544.2 188.5 544.2C102.1 544.2 32 474.2 32 387.7C32 346.2 48.5 306.4 77.8 277.1L148.9 206C178.2 176.7 218 160.2 259.5 160.2C346.1 160.2 416 230.8 416 317.1C416 318.4 416 319.7 416 321C415.6 338.7 400.9 352.6 383.2 352.2C365.5 351.8 351.6 337.1 352 319.4C352 318.6 352 317.9 352 317.1C352 283.4 334 253.8 307.2 237.5z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="description-project" data-translate="main.projects.solitaire.description">
+                            Juego de cartas clásico desarrollado con HTML, CSS y JavaScript.
+                        </p>
+                        <!-- acordeón -->
+                        <div class="details-container">
+                            <em class="explanation-project" data-translate="main.projects.solitaire.details_1">
+                                El propósito de este proyecto fue practicar con la lógica de la programación.
+                                Se trata de una idea que me obligaba a mantener un contexto reglado.
+                                Por ello que tuve que gestionar el estado de la partida
+                                y la iteración mediante eventos del DOM.
+                            </em>
+
+                            <em class="explanation-project" data-translate="main.projects.solitaire.details_2">
+                                Aprendí a manejar eventos complejos como el drag and drop
+                                y a crear animaciones simples para mejorar la jugabilidad;
+                                así como la importancia de definir requisitos antes de codificar para reducir
+                                errores
+                                iterativos.
+                            </em>
+
+                            <em class="explanation-project" data-translate="main.projects.solitaire.details_3">
+                                Con lo que sé a día de hoy, organizaría mejor la solución de la lógica e iría paso a
+                                paso:
+                                estructuraría el código separando claramente la lógica del juego (modelo) de la
+                                manipulación del DOM (vista),
+                                por ejemplo usando clases para el mazo, palo y columna, lo que facilitaría las
+                                pruebas y
+                                los cambios.
+                            </em>
+                        </div>
+                        <button class="toggle-details-btn" type="button" data-translate="buttons.view_details"
+                            data-translate-alt="buttons.view_less">
+                            Ver más detalles
+                        </button>
+
+                        <ul class="list-technologies">
+                            <li class="item-technology">HTML</li>
+                            <li class="item-technology">CSS</li>
+                            <li class="item-technology">JS</li>
+                        </ul>
+                    </li>
+                    <!-- librería pirámide -->
+                    <li class="item-project" id="libreriaPiramide">
+                        <div class="title-project-wrapper">
+                            <h3 class="title-project" data-translate="main.projects.library.title">Librería Pirámide
+                            </h3>
+                            <div class="link-project-wrapper">
+                                <a class="link link-project" href="https://aragonaj.github.io/LibreriaPiramide/">
+                                    <span data-translate="buttons.view_project">Ver proyecto</span>
+                                </a>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="image-svg" height="20px" width="20px"
+                                    viewBox="0 0 640 640" fill="currentColor">
+                                    <path
+                                        d="M451.5 160C434.9 160 418.8 164.5 404.7 172.7C388.9 156.7 370.5 143.3 350.2 133.2C378.4 109.2 414.3 96 451.5 96C537.9 96 608 166 608 252.5C608 294 591.5 333.8 562.2 363.1L491.1 434.2C461.8 463.5 422 480 380.5 480C294.1 480 224 410 224 323.5C224 322 224 320.5 224.1 319C224.6 301.3 239.3 287.4 257 287.9C274.7 288.4 288.6 303.1 288.1 320.8C288.1 321.7 288.1 322.6 288.1 323.4C288.1 374.5 329.5 415.9 380.6 415.9C405.1 415.9 428.6 406.2 446 388.8L517.1 317.7C534.4 300.4 544.2 276.8 544.2 252.3C544.2 201.2 502.8 159.8 451.7 159.8zM307.2 237.3C305.3 236.5 303.4 235.4 301.7 234.2C289.1 227.7 274.7 224 259.6 224C235.1 224 211.6 233.7 194.2 251.1L123.1 322.2C105.8 339.5 96 363.1 96 387.6C96 438.7 137.4 480.1 188.5 480.1C205 480.1 221.1 475.7 235.2 467.5C251 483.5 269.4 496.9 289.8 507C261.6 530.9 225.8 544.2 188.5 544.2C102.1 544.2 32 474.2 32 387.7C32 346.2 48.5 306.4 77.8 277.1L148.9 206C178.2 176.7 218 160.2 259.5 160.2C346.1 160.2 416 230.8 416 317.1C416 318.4 416 319.7 416 321C415.6 338.7 400.9 352.6 383.2 352.2C365.5 351.8 351.6 337.1 352 319.4C352 318.6 352 317.9 352 317.1C352 283.4 334 253.8 307.2 237.5z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <p class="description-project" data-translate="main.projects.library.description">
+                            Maquetación y diseño frontend creativo para una librería ficticia.
+                        </p>
+                        <!-- acordeón -->
+                        <div class="details-container">
+                            <em class="explanation-project" data-translate="main.projects.library.details_1">
+                                Este proyecto fue un ejercicio centrado en la maquetación avanzada con CSS y la
+                                mejora
+                                de la experiencia de usuario a través de pequeñas interacciones, priorizando la
+                                creatividad visual y la fluidez sobre la lógica compleja.
+                            </em>
+
+                            <em class="explanation-project" data-translate="main.projects.library.details_2">
+                                Este proyecto me permitió profundizar en el control preciso del layout con
+                                Flexbox/Grid,
+                                el uso estratégico de transiciones y animaciones CSS para guiar la atención, y la
+                                integración sutil de JavaScript
+                            </em>
+                        </div>
+
+                        <button class="toggle-details-btn" type="button" data-translate="buttons.view_details"
+                            data-translate-alt="buttons.view_less">
+                            Ver más detalles
+                        </button>
+
+                        <ul class="list-technologies">
+                            <li class="item-technology">HTML</li>
+                            <li class="item-technology">CSS</li>
+                            <li class="item-technology">JS</li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </article>
+            <article class="article article-human-languages" id="idiomas">
+                <h2 class="title-article" data-translate="main.human_languages.title">
+                    Idiomas <span data-translate="main.human_languages.subtitle">(mi lengua materna es el
+                        español)</span>
+                </h2>
+                <ul class="list-human-languages">
+                    <li class="item-human-language">
+                        <h3 class="title-human-language" data-translate="main.human_languages.english.title">Inglés
+                        </h3>
+                        <p class="level-human-language" data-translate="main.human_languages.english.level_1">
+                            Entiendo sin problemas textos técnicos, de desarrollo y
+                            textos literarios y conversaciones sobre temas cotidianos y técnicos.
+                        </p>
+                        <p class="level-human-language" data-translate="main.human_languages.english.level_2">
+                            Puedo mantener conversaciones con relativa fluidez;
+                            y escribo textos claros, tanto cotidianos como técnicos.
+                        </p>
+                    </li>
+                    <li class="item-human-language">
+                        <h3 class="title-human-language" data-translate="main.human_languages.french.title">Francés
+                        </h3>
+                        <p class="level-human-language" data-translate="main.human_languages.french.level_1">
+                            Entiendo sin problemas textos técnicos, de desarrollo y
+                            textos literarios; aunque me cuesta algo más comprender las conversaciones.
+                        </p>
+                        <p class="level-human-language" data-translate="main.human_languages.french.level_2">
+                            Puedo escribir textos claros tanto cotidianos como técnicos;
+                            pero me cuesta más mantener conversaciones fluidas.
+                        </p>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <!-- sidebar -->
+    <aside class="header-sidebar">
+        <section class="section-features">
+            <button class="button button-close-menu">
+                <svg class="image-svg" xmlns="http://www.w3.org/2000/svg" height="28px" width="28px"
+                    viewBox="0 -960 960 960" fill="currentColor">
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                </svg>
+            </button>
+            <button class="button button-theme">
+                <svg class="image-svg" width="28px" height="28px" viewBox="0 0 24 24" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12 17.75C10.8628 17.75 9.75106 17.4128 8.80547 16.781C7.85989 16.1491 7.1229 15.2511 6.6877 14.2004C6.25249 13.1498 6.13862 11.9936 6.36049 10.8782C6.58235 9.76284 7.12999 8.73829 7.93414 7.93414C8.73829 7.12999 9.76284 6.58235 10.8782 6.36049C11.9936 6.13862 13.1498 6.25249 14.2004 6.6877C15.2511 7.1229 16.1491 7.85989 16.781 8.80547C17.4128 9.75106 17.75 10.8628 17.75 12C17.7474 13.5242 17.1407 14.9852 16.0629 16.0629C14.9852 17.1407 13.5242 17.7474 12 17.75ZM12 7.75C11.1594 7.75 10.3377 7.99926 9.63883 8.46626C8.93992 8.93325 8.39519 9.59701 8.07351 10.3736C7.75184 11.1502 7.66768 12.0047 7.83167 12.8291C7.99565 13.6536 8.40043 14.4108 8.9948 15.0052C9.58917 15.5996 10.3464 16.0044 11.1709 16.1683C11.9953 16.3323 12.8498 16.2482 13.6264 15.9265C14.403 15.6048 15.0668 15.0601 15.5337 14.3612C16.0007 13.6623 16.25 12.8406 16.25 12C16.2474 10.8736 15.7987 9.79417 15.0023 8.99772C14.2058 8.20126 13.1264 7.75264 12 7.75Z"
+                        fill="currentColor" />
+                    <path
+                        d="M12 5C11.8019 4.99741 11.6126 4.91756 11.4725 4.77747C11.3324 4.63737 11.2526 4.44811 11.25 4.25V2.75C11.25 2.55109 11.329 2.36032 11.4697 2.21967C11.6103 2.07902 11.8011 2 12 2C12.1989 2 12.3897 2.07902 12.5303 2.21967C12.671 2.36032 12.75 2.55109 12.75 2.75V4.25C12.7474 4.44811 12.6676 4.63737 12.5275 4.77747C12.3874 4.91756 12.1981 4.99741 12 5Z"
+                        fill="currentColor" />
+                    <path
+                        d="M12 22C11.8019 21.9974 11.6126 21.9176 11.4725 21.7775C11.3324 21.6374 11.2526 21.4481 11.25 21.25V19.75C11.25 19.5511 11.329 19.3603 11.4697 19.2197C11.6103 19.079 11.8011 19 12 19C12.1989 19 12.3897 19.079 12.5303 19.2197C12.671 19.3603 12.75 19.5511 12.75 19.75V21.25C12.7474 21.4481 12.6676 21.6374 12.5275 21.7775C12.3874 21.9176 12.1981 21.9974 12 22Z"
+                        fill="currentColor" />
+                    <path
+                        d="M21.25 12.75H19.75C19.5511 12.75 19.3603 12.671 19.2197 12.5303C19.079 12.3897 19 12.1989 19 12C19 11.8011 19.079 11.6103 19.2197 11.4697C19.3603 11.329 19.5511 11.25 19.75 11.25H21.25C21.4489 11.25 21.6397 11.329 21.7803 11.4697C21.921 11.6103 22 11.8011 22 12C22 12.1989 21.921 12.3897 21.7803 12.5303C21.6397 12.671 21.4489 12.75 21.25 12.75Z"
+                        fill="currentColor" />
+                    <path
+                        d="M4.25 12.75H2.75C2.55109 12.75 2.36032 12.671 2.21967 12.5303C2.07902 12.3897 2 12.1989 2 12C2 11.8011 2.07902 11.6103 2.21967 11.4697C2.36032 11.329 2.55109 11.25 2.75 11.25H4.25C4.44891 11.25 4.63968 11.329 4.78033 11.4697C4.92098 11.6103 5 11.8011 5 12C5 12.1989 4.92098 12.3897 4.78033 12.5303C4.63968 12.671 4.44891 12.75 4.25 12.75Z"
+                        fill="currentColor" />
+                    <path
+                        d="M6.50001 7.24995C6.30707 7.2352 6.12758 7.14545 6.00001 6.99995L4.91001 5.99995C4.83844 5.92838 4.78167 5.84341 4.74293 5.7499C4.7042 5.65639 4.68427 5.55617 4.68427 5.45495C4.68427 5.35373 4.7042 5.25351 4.74293 5.16C4.78167 5.06649 4.83844 4.98152 4.91001 4.90995C4.98158 4.83838 5.06655 4.78161 5.16006 4.74287C5.25357 4.70414 5.3538 4.6842 5.45501 4.6842C5.55623 4.6842 5.65645 4.70414 5.74996 4.74287C5.84347 4.78161 5.92844 4.83838 6.00001 4.90995L7.00001 5.99995C7.123 6.13746 7.19099 6.31547 7.19099 6.49995C7.19099 6.68443 7.123 6.86244 7.00001 6.99995C6.87244 7.14545 6.69295 7.2352 6.50001 7.24995Z"
+                        fill="currentColor" />
+                    <path
+                        d="M18.56 19.31C18.4615 19.3104 18.3638 19.2912 18.2728 19.2534C18.1818 19.2157 18.0993 19.1601 18.03 19.09L17 18C16.9332 17.86 16.9114 17.7028 16.9376 17.5499C16.9638 17.3971 17.0368 17.2561 17.1465 17.1464C17.2561 17.0368 17.3971 16.9638 17.55 16.9376C17.7028 16.9113 17.8601 16.9331 18 17L19.09 18C19.2305 18.1406 19.3094 18.3312 19.3094 18.53C19.3094 18.7287 19.2305 18.9194 19.09 19.06C19.0233 19.1355 18.9419 19.1967 18.8508 19.2397C18.7597 19.2827 18.6607 19.3066 18.56 19.31Z"
+                        fill="currentColor" />
+                    <path
+                        d="M17.5 7.24995C17.3071 7.2352 17.1276 7.14545 17 6.99995C16.877 6.86244 16.809 6.68443 16.809 6.49995C16.809 6.31547 16.877 6.13746 17 5.99995L18 4.90995C18.1445 4.76541 18.3406 4.6842 18.545 4.6842C18.7494 4.6842 18.9455 4.76541 19.09 4.90995C19.2345 5.05449 19.3158 5.25054 19.3158 5.45495C19.3158 5.65936 19.2345 5.85541 19.09 5.99995L18 6.99995C17.8724 7.14545 17.6929 7.2352 17.5 7.24995Z"
+                        fill="currentColor" />
+                    <path
+                        d="M5.44001 19.31C5.34147 19.3104 5.24383 19.2912 5.15282 19.2534C5.06181 19.2157 4.97926 19.1601 4.91001 19.09C4.76956 18.9494 4.69067 18.7587 4.69067 18.56C4.69067 18.3612 4.76956 18.1706 4.91001 18.03L6.00001 17C6.13997 16.9331 6.2972 16.9113 6.45006 16.9376C6.60293 16.9638 6.7439 17.0368 6.85357 17.1464C6.96324 17.2561 7.03621 17.3971 7.06244 17.5499C7.08866 17.7028 7.06685 17.86 7.00001 18L6.00001 19.09C5.92728 19.1638 5.83985 19.2216 5.74338 19.2595C5.64691 19.2974 5.54356 19.3146 5.44001 19.31Z"
+                        fill="currentColor" />
+                </svg>
+            </button>
+            <div class="container-language">
+                <h2 class="language" data-translate="language_selector.current">ES</h2>
+                <ul class="list-languages">
+                    <li class="item-languages">
+                        <button class="button-language" id="sidebar-language-en"
+                            data-translate="language_selector.en">Inglés</button>
+                    </li>
+                    <li class="item-languages">
+                        <button class="button-language" id="sidebar-language-es"
+                            data-translate="language_selector.es">Español</button>
+                    </li>
+                    <li class="item-languages">
+                        <button class="button-language" id="sidebar-language-fr"
+                            data-translate="language_selector.fr">Francés</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section section-author">
+            <article class="article-author-info">
+                <img class="sidebar-author-image" loading="lazy" fetchpriority="low" decoding="async"
+                    src="assets/profile.jpg" alt="author">
+                <h2 class="title-author" data-translate="sidebar.title">A. J. Aragón</h2>
+            </article>
+            <article class="article-author-description">
+                <h2 class="role-author" data-translate="sidebar.role">Desarrollador Fullstack</h2>
+                <p class="description-author" data-translate="sidebar.description_1">
+                    Desarrollador de Aplicaciones Web especializado en .NET, Laravel y Angular.
+                </p>
+                <p class="description-author" data-translate="sidebar.description_2">
+                    Estudiante de principios SOLID, patrones de diseño y buenas prácticas.
+                </p>
+            </article>
+        </section>
+        <section class="section section-explore">
+            <h2 class="title-section" data-translate="sidebar.explore_title">Explora</h2>
+            <nav class="navbar header-navbar" aria-label="header-navbar">
+                <a class="link navbar-link" href="/index.html" data-translate="navigation.home">Home</a>
+                <a class="link navbar-link" href="#welcome" data-translate="navigation.welcome">Bienvenida</a>
+                <a class="link navbar-link" href="#technologies"
+                    data-translate="navigation.technologies">Tecnologías</a>
+                <a class="link navbar-link" href="#projects" data-translate="navigation.projects">Proyectos</a>
+                <a class="link navbar-link" href="#idiomas" data-translate="navidation.languages">Idiomas</a>
+            </nav>
+        </section>
+        <section class="section section-contact">
+            <h2 class="title-section" data-translate="sidebar.contact_title">Contáctame</h2>
+
+            <ul class="list-contact">
+                <li class="item-contact">
+                    <!-- mail -->
+                    <a class="link navbar-link" href="mailto:ajaragon@proton.me">
+                        <svg class="image-svg" width="25px" height="25px" viewBox="0 0 32 32" version="1.1"
+                            xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path class="stout"
+                                d="M6,2h20c2.2,0,4,1.8,4,4v20c0,2.2-1.8,4-4,4H6c-2.2,0-4-1.8-4-4V6C2,3.8,3.8,2,6,2z" />
+                            <path class="stin"
+                                d="M22,25h2c1.1,0,2-0.9,2-2V8.6c0-0.4-0.5-0.7-0.8-0.4L22,10.9V25z M20,13.2l-6.7,5.7c-0.7,0.6-1.8,0.6-2.6,0  l-4.7-4V23c0,1.1,0.9,2,2,2h12V13.2z M6,8.6v3.7l6,5.1l2.8-2.4c0,0-0.1-0.1-0.1-0.1L6.8,8.2C6.5,7.9,6,8.2,6,8.6z" />
+                        </svg>
+                        <span>ajaragon@proton.me</span>
+                    </a>
+                </li>
+                <li class="item-contact">
+                    <!-- linkedIn -->
+                    <a class="link navbar-link" href="https://www.linkedin.com/in/ajaragon/">
+                        <svg class="image-svg" height="25px" width="25px" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            viewBox="0 0 382 382" xml:space="preserve" fill="currentColor">
+                            <path d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+                        C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+                        H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+                        c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+                        s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+                        c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+                        c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+                        c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+                        L341.91,330.654L341.91,330.654z" />
+                        </svg>
+                        <span>www.linkedin.com/in/ajaragon</span>
+                    </a>
+                </li>
+                <li class="item-contact">
+
+                    <!-- github -->
+                    <a class="link navbar-link" href="https://github.com/andresaragonguerrero">
+                        <svg fill="currentColor" width="25px" height="25px" viewBox="0 -0.5 25 25"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="m12.301 0h.093c2.242 0 4.34.613 6.137 1.68l-.055-.031c1.871 1.094 3.386 2.609 4.449 4.422l.031.058c1.04 1.769 1.654 3.896 1.654 6.166 0 5.406-3.483 10-8.327 11.658l-.087.026c-.063.02-.135.031-.209.031-.162 0-.312-.054-.433-.144l.002.001c-.128-.115-.208-.281-.208-.466 0-.005 0-.01 0-.014v.001q0-.048.008-1.226t.008-2.154c.007-.075.011-.161.011-.249 0-.792-.323-1.508-.844-2.025.618-.061 1.176-.163 1.718-.305l-.076.017c.573-.16 1.073-.373 1.537-.642l-.031.017c.508-.28.938-.636 1.292-1.058l.006-.007c.372-.476.663-1.036.84-1.645l.009-.035c.209-.683.329-1.468.329-2.281 0-.045 0-.091-.001-.136v.007c0-.022.001-.047.001-.072 0-1.248-.482-2.383-1.269-3.23l.003.003c.168-.44.265-.948.265-1.479 0-.649-.145-1.263-.404-1.814l.011.026c-.115-.022-.246-.035-.381-.035-.334 0-.649.078-.929.216l.012-.005c-.568.21-1.054.448-1.512.726l.038-.022-.609.384c-.922-.264-1.981-.416-3.075-.416s-2.153.152-3.157.436l.081-.02q-.256-.176-.681-.433c-.373-.214-.814-.421-1.272-.595l-.066-.022c-.293-.154-.64-.244-1.009-.244-.124 0-.246.01-.364.03l.013-.002c-.248.524-.393 1.139-.393 1.788 0 .531.097 1.04.275 1.509l-.01-.029c-.785.844-1.266 1.979-1.266 3.227 0 .025 0 .051.001.076v-.004c-.001.039-.001.084-.001.13 0 .809.12 1.591.344 2.327l-.015-.057c.189.643.476 1.202.85 1.693l-.009-.013c.354.435.782.793 1.267 1.062l.022.011c.432.252.933.465 1.46.614l.046.011c.466.125 1.024.227 1.595.284l.046.004c-.431.428-.718 1-.784 1.638l-.001.012c-.207.101-.448.183-.699.236l-.021.004c-.256.051-.549.08-.85.08-.022 0-.044 0-.066 0h.003c-.394-.008-.756-.136-1.055-.348l.006.004c-.371-.259-.671-.595-.881-.986l-.007-.015c-.198-.336-.459-.614-.768-.827l-.009-.006c-.225-.169-.49-.301-.776-.38l-.016-.004-.32-.048c-.023-.002-.05-.003-.077-.003-.14 0-.273.028-.394.077l.007-.003q-.128.072-.08.184c.039.086.087.16.145.225l-.001-.001c.061.072.13.135.205.19l.003.002.112.08c.283.148.516.354.693.603l.004.006c.191.237.359.505.494.792l.01.024.16.368c.135.402.38.738.7.981l.005.004c.3.234.662.402 1.057.478l.016.002c.33.064.714.104 1.106.112h.007c.045.002.097.002.15.002.261 0 .517-.021.767-.062l-.027.004.368-.064q0 .609.008 1.418t.008.873v.014c0 .185-.08.351-.208.466h-.001c-.119.089-.268.143-.431.143-.075 0-.147-.011-.214-.032l.005.001c-4.929-1.689-8.409-6.283-8.409-11.69 0-2.268.612-4.393 1.681-6.219l-.032.058c1.094-1.871 2.609-3.386 4.422-4.449l.058-.031c1.739-1.034 3.835-1.645 6.073-1.645h.098-.005zm-7.64 17.666q.048-.112-.112-.192-.16-.048-.208.032-.048.112.112.192.144.096.208-.032zm.497.545q.112-.08-.032-.256-.16-.144-.256-.048-.112.08.032.256.159.157.256.047zm.48.72q.144-.112 0-.304-.128-.208-.272-.096-.144.08 0 .288t.272.112zm.672.673q.128-.128-.064-.304-.192-.192-.32-.048-.144.128.064.304.192.192.32.044zm.913.4q.048-.176-.208-.256-.24-.064-.304.112t.208.24q.24.097.304-.096zm1.009.08q0-.208-.272-.176-.256 0-.256.176 0 .208.272.176.256.001.256-.175zm.929-.16q-.032-.176-.288-.144-.256.048-.224.24t.288.128.225-.224z" />
+                        </svg>
+                        <span>github.com/andresaragonguerrero</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </aside>
+    <footer class="footer">
+        <h2 class="footer-title" data-translate="footer.copyright"><span>&copy</span> A. J. Aragón <span>2025</span>
+        </h2>
+        <nav class="footer-navbar" aria-label="footer-navbar">
+            <!-- linkedIn -->
+            <a class="link navbar-link" href="https://www.linkedin.com/in/ajaragon/">
+                <svg class="image-svg" height="25px" width="25px" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 382 382" xml:space="preserve"
+                    fill="currentColor">
+                    <path d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
+            C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
+            H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
+            c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
+            s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
+            c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
+            c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
+            c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
+            L341.91,330.654L341.91,330.654z" />
+                </svg>
+                <span>www.linkedin.com/in/ajaragon</span>
+            </a>
+            <!-- github -->
+            <a class="link navbar-link" href="https://github.com/andresaragonguerrero">
+                <svg fill="currentColor" width="25px" height="25px" viewBox="0 -0.5 25 25"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="m12.301 0h.093c2.242 0 4.34.613 6.137 1.68l-.055-.031c1.871 1.094 3.386 2.609 4.449 4.422l.031.058c1.04 1.769 1.654 3.896 1.654 6.166 0 5.406-3.483 10-8.327 11.658l-.087.026c-.063.02-.135.031-.209.031-.162 0-.312-.054-.433-.144l.002.001c-.128-.115-.208-.281-.208-.466 0-.005 0-.01 0-.014v.001q0-.048.008-1.226t.008-2.154c.007-.075.011-.161.011-.249 0-.792-.323-1.508-.844-2.025.618-.061 1.176-.163 1.718-.305l-.076.017c.573-.16 1.073-.373 1.537-.642l-.031.017c.508-.28.938-.636 1.292-1.058l.006-.007c.372-.476.663-1.036.84-1.645l.009-.035c.209-.683.329-1.468.329-2.281 0-.045 0-.091-.001-.136v.007c0-.022.001-.047.001-.072 0-1.248-.482-2.383-1.269-3.23l.003.003c.168-.44.265-.948.265-1.479 0-.649-.145-1.263-.404-1.814l.011.026c-.115-.022-.246-.035-.381-.035-.334 0-.649.078-.929.216l.012-.005c-.568.21-1.054.448-1.512.726l.038-.022-.609.384c-.922-.264-1.981-.416-3.075-.416s-2.153.152-3.157.436l.081-.02q-.256-.176-.681-.433c-.373-.214-.814-.421-1.272-.595l-.066-.022c-.293-.154-.64-.244-1.009-.244-.124 0-.246.01-.364.03l.013-.002c-.248.524-.393 1.139-.393 1.788 0 .531.097 1.04.275 1.509l-.01-.029c-.785.844-1.266 1.979-1.266 3.227 0 .025 0 .051.001.076v-.004c-.001.039-.001.084-.001.13 0 .809.12 1.591.344 2.327l-.015-.057c.189.643.476 1.202.85 1.693l-.009-.013c.354.435.782.793 1.267 1.062l.022.011c.432.252.933.465 1.46.614l.046.011c.466.125 1.024.227 1.595.284l.046.004c-.431.428-.718 1-.784 1.638l-.001.012c-.207.101-.448.183-.699.236l-.021.004c-.256.051-.549.08-.85.08-.022 0-.044 0-.066 0h.003c-.394-.008-.756-.136-1.055-.348l.006.004c-.371-.259-.671-.595-.881-.986l-.007-.015c-.198-.336-.459-.614-.768-.827l-.009-.006c-.225-.169-.49-.301-.776-.38l-.016-.004-.32-.048c-.023-.002-.05-.003-.077-.003-.14 0-.273.028-.394.077l.007-.003q-.128.072-.08.184c.039.086.087.16.145.225l-.001-.001c.061.072.13.135.205.19l.003.002.112.08c.283.148.516.354.693.603l.004.006c.191.237.359.505.494.792l.01.024.16.368c.135.402.38.738.7.981l.005.004c.3.234.662.402 1.057.478l.016.002c.33.064.714.104 1.106.112h.007c.045.002.097.002.15.002.261 0 .517-.021.767-.062l-.027.004.368-.064q0 .609.008 1.418t.008.873v.014c0 .185-.08.351-.208.466h-.001c-.119.089-.268.143-.431.143-.075 0-.147-.011-.214-.032l.005.001c-4.929-1.689-8.409-6.283-8.409-11.69 0-2.268.612-4.393 1.681-6.219l-.032.058c1.094-1.871 2.609-3.386 4.422-4.449l.058-.031c1.739-1.034 3.835-1.645 6.073-1.645h.098-.005zm-7.64 17.666q.048-.112-.112-.192-.16-.048-.208.032-.048.112.112.192.144.096.208-.032zm.497.545q.112-.08-.032-.256-.16-.144-.256-.048-.112.08.032.256.159.157.256.047zm.48.72q.144-.112 0-.304-.128-.208-.272-.096-.144.08 0 .288t.272.112zm.672.673q.128-.128-.064-.304-.192-.192-.32-.048-.144.128.064.304.192.192.32.044zm.913.4q.048-.176-.208-.256-.24-.064-.304.112t.208.24q.24.097.304-.096zm1.009.08q0-.208-.272-.176-.256 0-.256.176 0 .208.272.176.256.001.256-.175zm.929-.16q-.032-.176-.288-.144-.256.048-.224.24t.288.128.225-.224z" />
+                </svg>
+                <span>github.com/andresaragonguerrero</span>
+            </a>
+        </nav>
+    </footer>
+
+    <!-- Javascript -->
+    <script src="/js/main.js" fetchpriority="low" defer></script>
+    <script src="/js/translation.js" fetchpriority="low" defer></script>
+</body>
+
+</html>
