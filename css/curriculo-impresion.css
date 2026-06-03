@@ -376,6 +376,17 @@
         font-weight: 400 !important;
     }
 
+    .card-task {
+        font-size: 8pt !important;
+        line-height: 1.2 !important;
+        color: var(--color-text) !important;
+        margin: 0 !important;
+    }
+
+    .card-task .text-span {
+        font-weight: 400 !important;
+    }
+
     .card-duration {
         font-size: 8pt !important;
         color: var(--color-text) !important;
