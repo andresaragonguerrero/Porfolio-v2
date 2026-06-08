@@ -67,8 +67,8 @@
             },
             "hotel": {
                 "title": "Hotel Argyros",
-                "description": "Una aplicación en Angular y .NET para practicar y demostrar arquitectura y buenas prácticas de código.",
-                "details_1": "Este proyecto se encuentra actualmente en desarrollo. Pretendo demostrar mis conocimientos tanto en todo lo relacionado con las bases de datos, como el backend y el frontend."
+                "description": "Une application en Angular et .NET pour pratiquer et démontrer l'architecture et les bonnes pratiques de code.",
+                "details_1": "Ce projet est actuellement en cours de développement. J'ai l'intention de démontrer mes connaissances dans tout ce qui concerne les bases de données, ainsi que le backend et le frontend."
             }
         },
         "human_languages": {
